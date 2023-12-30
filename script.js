@@ -34,8 +34,6 @@ function onFormSubmit(e) {
   }
 }
 
-// script.js
-
 // Function to toggle additional details in the About section
 function toggleDetail(e) {
   const target = $(e.target);

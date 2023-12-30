@@ -51,7 +51,18 @@ section::before {
   z-index: 999;
 }
 
-.navbar-nav .nav-link {
+.navbar-toggler {
+  background: #cac2c2;
+  border-radius: 15px;
+}
+
+.navbar-toggler-icon {
+  margin-top: 0.5em;
+  color: black;
+  background-image: none;
+}
+
+#n .navbar-nav .nav-link {
   transition: color 0.3s ease-in-out;
 }
 
@@ -279,7 +290,7 @@ a {
   }
 
   #home {
-    padding-top: 2em;
+    padding-top: 70px;
   }
 
   .intro-text {
@@ -289,12 +300,16 @@ a {
   .introduction-container {
     margin: auto 1em;
   }
+
+  body > section:before {
+    top: 55px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
   section::before {
     left: 10px;
-    font-size: 64px;
+    font-size: 50px;
   }
 
   .contact-links > a {

@@ -215,6 +215,7 @@ a {
 
 #work-2:hover::after {
   content: "Software Project";
+  text-align: center;
 }
 
 #work-3 {

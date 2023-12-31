@@ -16,19 +16,8 @@ body.dark-mode p {
 }
 
 section {
-  padding-top: 128px;
+  padding-top: 90px;
   position: relative;
-}
-
-section::before {
-  z-index: -1;
-  content: "";
-  font-size: 72px;
-  color: white;
-  position: absolute;
-  font-weight: 700;
-  top: 20px;
-  left: -30px;
 }
 
 .btn.button {
@@ -106,6 +95,10 @@ a {
   text-decoration: none;
 }
 
+#home {
+  padding-top: 120px;
+}
+
 .home h1 {
   font-size: 60px;
 }
@@ -131,10 +124,6 @@ a {
   filter: invert(1);
 }
 
-.about::before {
-  content: "About";
-}
-
 .about-exp-item {
   margin-top: 32px;
 }
@@ -147,10 +136,6 @@ a {
 
 .about-exp-item-detail {
   display: none;
-}
-
-.work::before {
-  content: "Project";
 }
 
 .work-img {
@@ -209,6 +194,13 @@ a {
   font-size: 24px;
 }
 
+body > section > h1 {
+  font-size: 72px;
+  color: white;
+  position: relative;
+  font-weight: 700;
+}
+
 .profile {
   border-radius: 50%;
   border: 5px solid white;
@@ -240,10 +232,6 @@ a {
   content: "Team Project";
 }
 
-.work::before {
-  content: "Project";
-}
-
 .fa-instagram:hover {
   color: #bc2a8d;
 }
@@ -260,10 +248,6 @@ a {
   padding-bottom: 128px;
 }
 
-.contact::before {
-  content: "Contact";
-}
-
 .contact-form {
   border: 1px solid black;
   padding: 64px 32px;
@@ -273,6 +257,10 @@ a {
 .form-control::placeholder {
   color: black;
   opacity: 0.5;
+}
+
+.contact-links a {
+  color: white;
 }
 
 .form-label {
@@ -300,19 +288,10 @@ a {
   .introduction-container {
     margin: auto 1em;
   }
-
-  body > section:before {
-    top: 55px;
-  }
 }
 
 @media only screen and (max-width: 576px) {
-  section::before {
-    left: 10px;
-    font-size: 50px;
-  }
-
-  .contact-links > a {
+  .contact-links > p {
     margin-top: 1em;
   }
 }
@@ -328,5 +307,13 @@ a {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #work > h1,
+  #contact > h1 {
+    top: 1em;
+    height: 0;
   }
 }

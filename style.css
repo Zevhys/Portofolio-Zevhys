@@ -128,7 +128,7 @@ a {
 
 #arrow {
   animation: 2s upDown infinite;
-  filter: invert();
+  filter: invert(1);
 }
 
 .about::before {
@@ -150,7 +150,7 @@ a {
 }
 
 .work::before {
-  content: "Work";
+  content: "Project";
 }
 
 .work-img {

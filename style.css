@@ -259,7 +259,8 @@ body > section > h1 {
 }
 
 #work-1:hover::after {
-  content: "Web Project";
+  content: "To Do List";
+  font-weight: bold;
 }
 
 #work-2 {
@@ -267,8 +268,9 @@ body > section > h1 {
 }
 
 #work-2:hover::after {
-  content: "Software Project";
+  content: "Pomodoro Timer";
   text-align: center;
+  font-weight: bold;
 }
 
 #work-3 {
@@ -276,7 +278,8 @@ body > section > h1 {
 }
 
 #work-3:hover::after {
-  content: "Team Project";
+  content: "BookShelf";
+  font-weight: bold;
 }
 
 .fa-instagram:hover {

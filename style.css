@@ -32,6 +32,11 @@ section {
   color: white;
 }
 
+p {
+  letter-spacing: 0.1ch;
+  word-spacing: 0.1em;
+}
+
 .navbar {
   background-color: white;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
@@ -55,6 +60,11 @@ section {
   transition: color 0.3s ease-in-out;
 }
 
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
 .navbar-nav .nav-link:hover {
   color: #61dafb;
 }
@@ -62,6 +72,23 @@ section {
 .navbar-brand {
   color: #333;
   transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+  left: 10%;
 }
 
 .navbar-brand:hover {
@@ -96,7 +123,8 @@ a {
 }
 
 #home {
-  padding-top: 120px;
+  padding-top: 150px;
+  padding-bottom: 4em;
 }
 
 .home h1 {
@@ -136,6 +164,19 @@ a {
 
 .about-exp-item-detail {
   display: none;
+  padding-top: 1em;
+}
+
+.skill > svg {
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: calc(32px + 1em);
+  border-radius: 10px;
+}
+
+.skill > svg:hover {
+  background-color: var(--c);
+  fill: #121212;
 }
 
 .work-img {
@@ -171,7 +212,9 @@ a {
 }
 
 .about-subheading {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.85em;
 }
 
 .work-img img {
@@ -240,6 +283,34 @@ body > section > h1 {
   color: #bc2a8d;
 }
 
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 400px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: black;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
 .fa-github:hover {
   color: #333;
 }
@@ -282,7 +353,7 @@ body > section > h1 {
   }
 
   #home {
-    padding-top: 70px;
+    padding-top: 2em;
   }
 
   .intro-text {
@@ -291,6 +362,18 @@ body > section > h1 {
 
   .introduction-container {
     margin: auto 1em;
+  }
+
+  .navbar-nav .nav-link::after {
+    width: 0;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 0;
+  }
+
+  .swiper {
+    padding-top: 35px;
   }
 }
 

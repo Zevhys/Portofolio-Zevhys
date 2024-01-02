@@ -1,18 +1,3 @@
-// Function to toggle additional details in the About section
-function toggleDetail(e) {
-  const target = $(e.target);
-
-  if ($(target).hasClass("active")) {
-    $(target).html("More Info").removeClass("active");
-  } else {
-    $(target).html("Less Info").addClass("active");
-  }
-
-  const item = $(target).parents(".about-exp-item");
-  const detail = $(item).children(".about-exp-item-detail");
-  $(detail).slideToggle();
-}
-
 // Function to handle form submission
 function onFormSubmit(e) {
   e.preventDefault();
@@ -32,21 +17,6 @@ function onFormSubmit(e) {
     $(subject).val("");
     $(message).val("");
   }
-}
-
-// Function to toggle additional details in the About section
-function toggleDetail(e) {
-  const target = $(e.target);
-
-  if (target.hasClass("active")) {
-    target.html("More Info").removeClass("active");
-  } else {
-    target.html("Less Info").addClass("active");
-  }
-
-  const item = target.closest(".about-exp-item");
-  const detail = item.children(".about-exp-item-detail");
-  detail.slideToggle();
 }
 
 // Function to handle form submission
@@ -89,7 +59,29 @@ new TypeIt("#identity", {
 })
   .type("Front End Web Developer", { delay: 2000 })
   .delete()
-  .type("Student Informatics Engineering", { delay: 2000 })
+  .type("Informatics Engineering Student", { delay: 2000 })
   .delete()
   .type("Tech Enthusiast", { delay: 2000 })
   .go();
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  autoHeight: true,
+  autoplay: {
+    delay: 1500,
+  },
+
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});

@@ -40,9 +40,14 @@ p {
 .navbar {
   background-color: white;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .navbar-toggler {
@@ -122,9 +127,12 @@ a {
   text-decoration: none;
 }
 
-#home {
-  padding-top: 150px;
-  padding-bottom: 4em;
+#home > div > div:first-child {
+  margin-top: 8em;
+}
+
+#home > div > div:last-child {
+  margin-top: 2em;
 }
 
 .home h1 {
@@ -165,6 +173,12 @@ a {
 .about-exp-item-detail {
   display: none;
   padding-top: 1em;
+}
+
+.tooltip {
+  font-family: "Poppins", sans-serif;
+  --bs-tooltip-bg: grey;
+  --bs-tooltip-color: black;
 }
 
 .skill > svg {
@@ -282,7 +296,7 @@ body > section > h1 {
   font-weight: bold;
 }
 
-.fa-instagram:hover {
+.contact-links .fa-instagram:hover {
   color: #bc2a8d;
 }
 
@@ -314,11 +328,11 @@ body > section > h1 {
   background: white;
 }
 
-.fa-github:hover {
+.contact-links .fa-github:hover {
   color: #333;
 }
 
-.fa-linkedin:hover {
+.contact-links .fa-linkedin:hover {
   color: #0e76a8;
 }
 
@@ -346,7 +360,62 @@ body > section > h1 {
 }
 
 .introduction-container {
-  min-height: calc(48px * 3);
+  min-height: 200px;
+}
+
+.footer-container {
+  width: 100%;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+  min-width: 3em;
+  min-height: 3em;
+}
+
+.social-icon a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.social-icon a:hover {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.social-icon a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer-bottom {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  color: black !important;
+}
+
+.footer-bottom p {
+  color: black !important;
+  margin-bottom: 0;
+}
+
+.created {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0px 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -356,7 +425,11 @@ body > section > h1 {
   }
 
   #home {
-    padding-top: 2em;
+    padding-top: 5em;
+  }
+
+  #home > div > div:first-child {
+    margin-top: 1.5em;
   }
 
   .intro-text {
@@ -406,4 +479,9 @@ body > section > h1 {
     top: 1em;
     height: 0;
   }
+}
+
+#submitted-spinner {
+  height: 1em;
+  margin-right: 0.45em;
 }

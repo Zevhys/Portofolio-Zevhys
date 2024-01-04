@@ -30,9 +30,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
   <!-- Assets Icon -->
-  <link rel="stylesheet" href="Assets/css/brands.min.css">
-  <link rel="stylesheet" href="Assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="Assets/css/solid.min.css">
+  <link rel="stylesheet" href="Assets/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="Assets/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="Assets/fontawesome/css/solid.min.css">
 
   <!-- Logo Website -->
   <link rel="icon" type="image/svg+xml" href="Img/logo.svg">
@@ -71,6 +71,7 @@
 
   <!-- Section -->
   <section id="home" class="home container">
+    <!-- <div id="particles"></div> -->
     <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
       <div class="col-12 col-md-8 intro-text">
         <h3 class="fw-semibold text-white">Hi<span class="wave">👋</span><br>My Name is</h3>
@@ -78,7 +79,7 @@
         <p class="introduction-container">I am a... <br> <span id="identity"></span></p>
       </div>
       <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
-        <img src="Img/Profile-1.webp" alt="Potrait" class="profile" title="My">
+        <img src="Img/Profile-1.webp" alt="Potrait" class="profile" title="My" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -302,7 +303,7 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <script src="script.js"></script>
 </body>

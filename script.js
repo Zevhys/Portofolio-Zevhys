@@ -122,4 +122,7 @@ $(function () {
 
 form.reset();
 
-AOS.init();
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load("home", "Assets/particle-js/particlesjs.json", function () {
+  console.log("callback - particles.js config loaded");
+});

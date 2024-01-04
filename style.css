@@ -15,6 +15,15 @@ body.dark-mode p {
   color: white;
 }
 
+.particles-js-canvas-el {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
 section {
   padding-top: 90px;
   position: relative;
@@ -147,30 +156,6 @@ a {
 
 .home img {
   width: 100%;
-}
-
-.home .arrow img {
-  width: 60px;
-}
-
-#arrow {
-  animation: 2s upDown infinite;
-  filter: invert(1);
-}
-
-.about-exp-item {
-  margin-top: 32px;
-}
-
-.about-exp-item-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about-exp-item-detail {
-  display: none;
-  padding-top: 1em;
 }
 
 .tooltip {

@@ -121,3 +121,5 @@ $(function () {
 });
 
 form.reset();
+
+AOS.init();

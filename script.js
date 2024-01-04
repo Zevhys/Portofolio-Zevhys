@@ -1,9 +1,10 @@
+const email = $("#inp_email");
+const subject = $("#inp_subject");
+const message = $("#inp_message");
+
 // Function to handle form submission
 function onFormSubmit(e) {
   e.preventDefault();
-  const email = $("#inp_email");
-  const subject = $("#inp_subject");
-  const message = $("#inp_message");
 
   if (!$(email).val()) {
     alert("Email is required");
@@ -13,9 +14,9 @@ function onFormSubmit(e) {
     alert("Message is required");
   } else {
     alert("Form Submitted");
-    $(email).val("");
-    $(subject).val("");
-    $(message).val("");
+    // $(email).val("");
+    // $(subject).val("");
+    // $(message).val("");
   }
 }
 
@@ -52,9 +53,6 @@ form.addEventListener("submit", (e) => {
 });
 
 // Function to handle form submission
-const email = $("#inp_email");
-const subject = $("#inp_subject");
-const message = $("#inp_message");
 
 function onFormSubmit(e) {
   e.preventDefault();
@@ -121,3 +119,5 @@ var swiper = new Swiper(".mySwiper", {
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
 });
+
+form.reset();

@@ -22,6 +22,9 @@
   <!-- Typeit Js -->
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
+  <!-- Aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,12 +73,13 @@
   <!-- Section -->
   <section id="home" class="home container">
     <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
-      <div class="col-12 col-md-8 intro-text">
+      <div class="col-12 col-md-8 intro-text" data-aos="fade-right" data-aos-duration="1000">
         <h3 class="fw-semibold text-white">Hi<span class="wave">👋</span><br>My Name is</h3>
         <h1 class="fw-bold my-name">Rakha Djauhari</h1>
         <p class="introduction-container">I am a... <br> <span id="identity"></span></p>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
+      <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center" data-aos="fade-left"
+        data-aos-duration="1000" data-aos-delay="200">
         <img src="Img/Profile-1.webp" alt="Potrait" class="profile" title="My">
       </div>
     </div>
@@ -188,10 +192,10 @@
   <br>
 
   <section id="work" class="work container">
-    <h1>Project</h1>
+    <h1 data-aos="fade-up-right" data-aos-duration="1000" data-aos-offset="350">Project</h1>
     <div class="row d-flex align-items-center gap-5">
       <div class="col-12 col-md-5">
-        <p>
+        <p data-aos="fade-up-right" data-aos-duration="1000" data-aos-offset="350">
           The To-Do List project provides efficient task management functionality, while the Pomodoro Timer helps
           enhance
           productivity with focused work cycles. The Bookshelf App offers a delightful experience for managing and
@@ -199,7 +203,8 @@
           collections, creating a digital ecosystem for literature enthusiasts.
         </p>
       </div>
-      <div class="col-12 col-md-6 work-img">
+      <div class="col-12 col-md-6 work-img" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="200"
+        data-aos-offset="340">
         <a id="work-1" class="work-img-item" href="https://zevhys.github.io/To-Do-List/" target="_blank"
           rel="noreferrer noopener">
           <img src="Img/Project/to-do-list.webp" alt="work 1" loading="lazy" alt="To Do List Project">
@@ -299,6 +304,8 @@
 
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="script.js"></script>
 </body>

@@ -95,20 +95,8 @@ p {
   background-image: var(--gradient1);
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: 300% 300%;
   color: transparent;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
-  animation: gradient-animation 5s infinite alternate;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: left;
-  }
-
-  100% {
-    background-position: right;
-  }
 }
 
 .navbar-nav .nav-link::after {
@@ -420,10 +408,8 @@ body > section > h1 {
   background-image: var(--gradient1);
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: 300%;
   color: transparent;
   filter: drop-shadow(3px 3px 3px rgba(0.55, 0.55, 0.55, 0.55));
-  animation: gradient-animation 5s infinite alternate;
 }
 
 @media only screen and (max-width: 768px) {

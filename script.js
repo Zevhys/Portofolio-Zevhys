@@ -126,3 +126,5 @@ form.reset();
 particlesJS.load("home", "Assets/particle-js/particlesjs.json", function () {
   console.log("callback - particles.js config loaded");
 });
+
+const brandText = document.getElementById("navbar-brand");

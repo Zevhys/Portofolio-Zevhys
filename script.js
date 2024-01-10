@@ -27,10 +27,24 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then(function (response) {
       btn_submit_restore();
-      alert("Form Submitted");
+      // alert("Form Submitted");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        text: "Your message has been sent",
+        title: "Form Submitted!",
+        showConfirmButton: true,
+        // timer: 1500,
+      });
     })
     .catch(function (error) {
       btn_submit_restore();
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Why do I have this issue?</a>',
+      });
       alert(`An error occured: \n ${error}`);
     });
 });

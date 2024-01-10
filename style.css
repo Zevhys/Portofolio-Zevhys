@@ -95,10 +95,10 @@ p {
   background-image: var(--gradient1);
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: 500%;
+  background-size: 300% 300%;
   color: transparent;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
-  animation: gradient-animation 10s infinite alternate;
+  animation: gradient-animation 5s infinite alternate;
 }
 
 @keyframes gradient-animation {
@@ -417,6 +417,13 @@ body > section > h1 {
   text-transform: uppercase;
   font-weight: 500;
   margin: 0px 5px;
+  background-image: var(--gradient1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300% 300%;
+  color: transparent;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+  animation: gradient-animation 5s infinite alternate;
 }
 
 @media only screen and (max-width: 768px) {

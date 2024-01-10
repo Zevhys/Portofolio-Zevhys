@@ -83,9 +83,32 @@ p {
   color: #61dafb;
 }
 
+:root {
+  --gradient1: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
+}
+
 .navbar-brand {
-  color: #333;
-  transition: color 0.3s ease-in-out;
+  background-image: var(--gradient1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 500%;
+  color: transparent;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+  animation: gradient-animation 10s infinite alternate;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
 }
 
 .navbar-nav .nav-link::after {
@@ -103,22 +126,6 @@ p {
 .navbar-nav .nav-link:hover::after {
   width: 80%;
   left: 10%;
-}
-
-.navbar-brand:hover {
-  color: #0e76a8;
-}
-
-.profile {
-  opacity: 0.8;
-}
-
-.profile:hover {
-  opacity: 1;
-}
-
-.profile {
-  opacity: 0;
 }
 
 .profile.show {

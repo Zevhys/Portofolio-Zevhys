@@ -246,9 +246,30 @@ body > section > h1 {
 }
 
 .profile {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 5px 5px 10px 2px rgba(84, 43, 111, 0.485);
+  border: 5px solid transparent;
+  animation: borderAnimation 4s infinite linear;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ff66b2;
+  }
+  25% {
+    border-color: #99c2ff;
+  }
+  50% {
+    border-color: #ffd966;
+  }
+  75% {
+    border-color: #99c2ff;
+  }
+  100% {
+    border-color: #ff6666;
+  }
 }
 
 #work-1 {
@@ -381,11 +402,13 @@ body > section > h1 {
 .footer-bottom p {
   color: black !important;
   margin-bottom: 0;
+  font-weight: 500;
+  font-size: 0.9em !important;
 }
 
 .created {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0px 5px;
 }
 

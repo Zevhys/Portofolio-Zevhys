@@ -45,7 +45,7 @@ form.addEventListener("submit", (e) => {
         text: "Something went wrong!",
         footer: '<a href="#">Why do I have this issue?</a>',
       });
-      alert(`An error occured: \n ${error}`);
+      // alert(`An error occured: \n ${error}`);
     });
 });
 

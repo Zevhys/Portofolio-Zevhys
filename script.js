@@ -2,24 +2,6 @@ const email = $("#inp_email");
 const subject = $("#inp_subject");
 const message = $("#inp_message");
 
-// Function to handle form submission
-function onFormSubmit(e) {
-  e.preventDefault();
-
-  if (!$(email).val()) {
-    alert("Email is required");
-  } else if (!$(subject).val()) {
-    alert("Subject is required");
-  } else if (!$(message).val()) {
-    alert("Message is required");
-  } else {
-    alert("Form Submitted");
-    // $(email).val("");
-    // $(subject).val("");
-    // $(message).val("");
-  }
-}
-
 // Spread Sheet
 const scriptURL =
   "https://script.google.com/macros/s/AKfycby7JkuVn04VE-Dla5Jrekzzi6MMulPmqCqBHzIXInkT_u9MRjfPPkmbqhC81Gu7SFUuXA/exec";
@@ -30,6 +12,7 @@ const submitted_text = $("#submitted-text")[0];
 
 console.log(btn_submit);
 
+// Submit Form
 function btn_submit_restore() {
   btn_submit.disabled = false;
   submitted_text.textContent = "Submit";
@@ -51,24 +34,6 @@ form.addEventListener("submit", (e) => {
       alert(`An error occured: \n ${error}`);
     });
 });
-
-// Function to handle form submission
-
-function onFormSubmit(e) {
-  e.preventDefault();
-
-  if (!email.val()) {
-    alert("Email is required");
-  } else if (!subject.val()) {
-    alert("Subject is required");
-  } else if (!message.val()) {
-    alert("Message is required");
-  } else {
-    // email.val("");
-    // subject.val("");
-    // message.val("");
-  }
-}
 
 // Close the navbar when clicking outside of it
 document.addEventListener("click", function (e) {
@@ -126,5 +91,3 @@ form.reset();
 particlesJS.load("home", "Assets/particle-js/particlesjs.json", function () {
   console.log("callback - particles.js config loaded");
 });
-
-const brandText = document.getElementById("navbar-brand");

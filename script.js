@@ -27,7 +27,6 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then(function (response) {
       btn_submit_restore();
-      // alert("Form Submitted");
       Swal.fire({
         position: "center",
         icon: "success",
@@ -35,6 +34,7 @@ form.addEventListener("submit", (e) => {
         title: "Form Submitted!",
         showConfirmButton: true,
       });
+      form.reset();
     })
     .catch(function (error) {
       btn_submit_restore();
@@ -45,7 +45,6 @@ form.addEventListener("submit", (e) => {
         text: `${error}`,
         showConfirmButton: true,
       });
-      z;
     });
 });
 
@@ -98,5 +97,3 @@ var swiper = new Swiper(".mySwiper", {
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
 });
-
-form.reset();

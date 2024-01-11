@@ -34,18 +34,18 @@ form.addEventListener("submit", (e) => {
         text: "Your message has been sent",
         title: "Form Submitted!",
         showConfirmButton: true,
-        // timer: 1500,
       });
     })
     .catch(function (error) {
       btn_submit_restore();
       Swal.fire({
+        position: "center",
         icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
-        footer: '<a href="#">Why do I have this issue?</a>',
+        title: "An error occured",
+        text: `${error}`,
+        showConfirmButton: true,
       });
-      // alert(`An error occured: \n ${error}`);
+      z;
     });
 });
 
@@ -100,8 +100,3 @@ $(function () {
 });
 
 form.reset();
-
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("home", "Assets/particle-js/particlesjs.json", function () {
-  console.log("callback - particles.js config loaded");
-});

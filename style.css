@@ -445,6 +445,22 @@ body > section > h1 {
   .swiper {
     padding-top: 35px;
   }
+
+  h3 {
+    font-size: 30px !important;
+  }
+
+  .introduction-container {
+    font-size: 19px !important;
+  }
+
+  .my-name {
+    font-size: 45px !important;
+  }
+
+  .txts {
+    font-size: 2.65em;
+  }
 }
 
 @media only screen and (max-width: 576px) {

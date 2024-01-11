@@ -1,7 +1,3 @@
-const email = $("#inp_email");
-const subject = $("#inp_subject");
-const message = $("#inp_message");
-
 // Spread Sheet
 const scriptURL =
   "https://script.google.com/macros/s/AKfycby7JkuVn04VE-Dla5Jrekzzi6MMulPmqCqBHzIXInkT_u9MRjfPPkmbqhC81Gu7SFUuXA/exec";

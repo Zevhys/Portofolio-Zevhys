@@ -53,6 +53,7 @@ p {
   top: 0;
   z-index: 999;
   width: 100%;
+  transition: color 0.3s ease-in-out;
 }
 
 .hidden {
@@ -83,20 +84,23 @@ p {
   color: #61dafb;
 }
 
-:root {
-  --gradient1: radial-gradient(
-    circle 610px at 5.2% 51.6%,
-    rgba(5, 8, 114, 1) 0%,
-    rgba(7, 3, 53, 1) 97.5%
-  );
-}
-
 .navbar-brand {
-  background-image: var(--gradient1);
+  background: linear-gradient(to right, #4b0082, #fff 30%, #800080);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  animation: brand 3s linear infinite;
+}
+
+@keyframes brand {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .navbar-nav .nav-link::after {
@@ -197,10 +201,24 @@ a {
 
 .my-name {
   font-size: 72px;
-  background: linear-gradient(to right, #f8dbff 30%, #5b78c7 84%, #c3cf84 100%);
+  background: linear-gradient(to right, rgba(0, 168, 253), #fff 35%, #e00a95);
+  background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: myname 3s linear infinite;
+}
+
+@keyframes myname {
+  0% {
+    background-position: 0% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
 }
 
 .about-subheading {
@@ -333,11 +351,6 @@ body > section > h1 {
   background-color: #24211f;
 }
 
-.form-control::placeholder {
-  color: black;
-  opacity: 0.5;
-}
-
 .contact-links a {
   color: white;
 }
@@ -405,11 +418,13 @@ body > section > h1 {
   text-transform: uppercase;
   font-weight: 500;
   margin: 0px 5px;
-  background-image: var(--gradient1);
+  background: linear-gradient(to right, #4b0082, #fff 30%, #800080);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  filter: drop-shadow(3px 3px 3px rgba(0.55, 0.55, 0.55, 0.55));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  animation: brand 3s linear infinite;
 }
 
 @media only screen and (max-width: 768px) {
@@ -419,7 +434,7 @@ body > section > h1 {
   }
 
   #home {
-    padding-top: 5em;
+    padding-top: 8.5em;
   }
 
   #home > div > div:first-child {
@@ -451,15 +466,20 @@ body > section > h1 {
   }
 
   .introduction-container {
-    font-size: 19px !important;
+    font-size: 20px !important;
   }
 
   .my-name {
-    font-size: 45px !important;
+    font-size: 40px !important;
   }
 
   .txts {
     font-size: 2.65em;
+  }
+
+  section {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
   }
 }
 

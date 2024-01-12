@@ -58,16 +58,18 @@ $(document).ready(function () {
   }, 100);
 });
 
+// Type It
 new TypeIt("#identity", {
   loop: true,
 })
   .type("Front End Web Developer", { delay: 2000 })
   .delete()
-  .type("Informatics Engineering Student", { delay: 2000 })
+  .type("Informatics Engineering", { delay: 2000 })
   .delete()
   .type("Tech Enthusiast", { delay: 2000 })
   .go();
 
+// Swiper
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -90,6 +92,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// Tool Tip
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
 });

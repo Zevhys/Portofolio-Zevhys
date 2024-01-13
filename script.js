@@ -1,3 +1,6 @@
+const subject = $("#inp_subject")[0];
+const message = $("#inp_message")[0];
+
 // Spread Sheet
 const scriptURL =
   "https://script.google.com/macros/s/AKfycby7JkuVn04VE-Dla5Jrekzzi6MMulPmqCqBHzIXInkT_u9MRjfPPkmbqhC81Gu7SFUuXA/exec";
@@ -15,33 +18,53 @@ function btn_submit_restore() {
   submitted_spinner.classList.toggle("hidden");
 }
 
+btn_submit.addEventListener("click", () => {
+  let message_trimmed = message.value.trim();
+  let subject_trimmed = subject.value.trim();
+
+  message.value = message_trimmed;
+  subject.value = subject_trimmed;
+});
+
 form.addEventListener("submit", (e) => {
-  btn_submit.disabled = true;
-  submitted_text.textContent = "Submitting";
-  submitted_spinner.classList.toggle("hidden");
   e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then(function (response) {
-      btn_submit_restore();
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        text: "Your message has been sent",
-        title: "Form Submitted!",
-        showConfirmButton: true,
+  let message_trimmed = message.value.trim();
+  let subject_trimmed = subject.value.trim();
+
+  message.value = message_trimmed;
+  subject.value = subject_trimmed;
+
+  if (message_trimmed == "" || subject_trimmed == "") {
+    // e.preventDefault();
+    alert("Dont Use Space For One Chracter");
+  } else {
+    btn_submit.disabled = true;
+    submitted_text.textContent = "Submitting";
+    submitted_spinner.classList.toggle("hidden");
+    // e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then(function (response) {
+        btn_submit_restore();
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          text: "Your message has been sent",
+          title: "Form Submitted!",
+          showConfirmButton: true,
+        });
+        form.reset();
+      })
+      .catch(function (error) {
+        btn_submit_restore();
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "An error occured",
+          text: `${error}`,
+          showConfirmButton: true,
+        });
       });
-      form.reset();
-    })
-    .catch(function (error) {
-      btn_submit_restore();
-      Swal.fire({
-        position: "center",
-        icon: "error",
-        title: "An error occured",
-        text: `${error}`,
-        showConfirmButton: true,
-      });
-    });
+  }
 });
 
 // Close the navbar when clicking outside of it
@@ -56,6 +79,22 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".profile").addClass("show");
   }, 100);
+});
+
+// Navbar Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    const scrollY = window.scrollY;
+    const scrollOffset = 50;
+
+    if (scrollY > scrollOffset) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 });
 
 // Type It
@@ -96,3 +135,5 @@ var swiper = new Swiper(".mySwiper", {
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
 });
+
+form.reset();

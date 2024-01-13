@@ -40,7 +40,7 @@
 
 <body class="dark-mode">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg filterv">
     <div class="container">
       <a class=" navbar-brand fs-4 fw-bold" href="#">Zevhys</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -50,7 +50,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
@@ -217,7 +217,7 @@
         </p>
       </div>
       <div class="col-12 col-lg-5">
-        <form class="contact-form" onsubmit="onFormSubmit(event)" name="zevhys-contact-form">
+        <form class="contact-form" name="zevhys-contact-form">
           <div class="mb-3">
             <label for="inp_email" class="form-label text-white">
               <i class="fa-solid fa-envelope"></i> Gmail address
@@ -229,13 +229,15 @@
             <label for="inp_subject" class="form-label text-white">
               <i class="fa-solid fa-user"></i> Subject
             </label>
-            <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject" required name="subject">
+            <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject" required name="subject"
+              minlength="5" maxlength="35">
           </div>
           <div class="mb-3">
             <label for="inp_message" class="form-label text-white">
               <i class="fa-solid fa-message"></i> Message
             </label>
-            <input type="text" class="form-control" id="inp_message" placeholder="Your Message" required name="message">
+            <input type="text" class="form-control" id="inp_message" placeholder="Your Message" required name="message"
+              minlength="5" maxlength="500">
           </div>
           <div class="d-flex justify-content-center mt-5">
             <button type="submit" class="btn button text-white" id="btn-submit">

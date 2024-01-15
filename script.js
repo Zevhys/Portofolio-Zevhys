@@ -98,20 +98,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Hamburger
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggler = document.querySelector(".navbar-toggler");
-  const navbarCollapse = document.querySelector(".navbar-collapse");
-
-  navbarToggler.addEventListener("click", function () {
-    navbarCollapse.classList.toggle("show");
+$(document).ready(function () {
+  // Smooth scroll for navbar links
+  $(".navbar-nav a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
   });
 
-  const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  navbarLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      navbarCollapse.classList.remove("show");
-    });
+  // Close the navbar when a link is clicked
+  $(".navbar-nav a").on("click", function () {
+    $(".navbar-collapse").collapse("hide");
   });
+});
+
+// Change navbar background on scroll
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 50) {
+    $(".navbar").addClass("scrolled");
+  } else {
+    $(".navbar").removeClass("scrolled");
+  }
 });
 
 // Type It

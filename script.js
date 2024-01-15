@@ -97,6 +97,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Hamburger Menu
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the navbar toggle button
+  var navbarToggleBtn = document.getElementById("navbarToggleBtn");
+
+  // Get all the navbar links
+  var navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  // Function to close the navbar menu
+  function closeNavbar() {
+    var navbar = document.querySelector(".navbar-collapse");
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+    }
+  }
+
+  // Add click event listener to each navbar link
+  navbarLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      // Close the navbar menu
+      closeNavbar();
+    });
+  });
+
+  // Add click event listener to the navbar toggle button
+  navbarToggleBtn.addEventListener("click", function () {
+    // Close the navbar menu if it's open
+    closeNavbar();
+  });
+});
+
 // Type It
 new TypeIt("#identity", {
   loop: true,

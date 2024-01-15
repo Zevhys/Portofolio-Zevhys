@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarCollapse.classList.toggle("show");
   });
 
-  // Tutup navbar ketika link diklik
   const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
   navbarLinks.forEach(function (link) {
     link.addEventListener("click", function () {

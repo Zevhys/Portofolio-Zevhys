@@ -43,8 +43,8 @@
   <nav class="navbar navbar-expand-lg filterv">
     <div class="container">
       <a class=" navbar-brand fs-4 fw-bold" href="#">Zevhys</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button id="navbarToggleBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon fa-solid fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -229,15 +229,15 @@
             <label for="inp_subject" class="form-label text-white">
               <i class="fa-solid fa-user"></i> Subject
             </label>
-            <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject" required name="subject"
+            <input type="text" class="form-control" id="inp_subject" placeholder="Your Name" required name="subject"
               minlength="5" maxlength="35">
           </div>
           <div class="mb-3">
             <label for="inp_message" class="form-label text-white">
               <i class="fa-solid fa-message"></i> Message
             </label>
-            <input type="text" class="form-control" id="inp_message" placeholder="Your Message" required name="message"
-              minlength="5" maxlength="500">
+            <textarea class="form-control" id="inp_message" placeholder="Your Message" required name="message"
+              minlength="5" maxlength="500" rows="1" cols="5" spellcheck="false"></textarea>
           </div>
           <div class="d-flex justify-content-center mt-5">
             <button type="submit" class="btn button text-white" id="btn-submit">
